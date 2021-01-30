@@ -170,9 +170,9 @@
             </div>
             <div class="indicators">
               <label for="indicator-left">Левый индикатор</label>
-              <input type="radio" name="indicator-left"> 
+              <input type="radio" name="indicator" id="indicator-left"> 
               <label for="indicator-right">Правый индикатор</label>                       
-              <input type="radio" name="indicator-right">                        
+              <input type="radio" name="indicator" id="indicator-right">                        
             </div>
           </div>
 
@@ -377,6 +377,19 @@
 
     </footer>
 
+    <div class="contacts-form">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="user-name">Ваше имя.</label>
+        <input type="text" name="name-field" id="user-name" placeholder="Имя Фамилия">
+        <label for="user-mail">Ваш e-mail.</label>
+        <input type="email" name="mail-field" id="user-mail" placeholder="email@example.com">
+        <label for="user-text">Текст письма:</label>
+        <textarea name="text-field" id="user-text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+        <div>
+          <button type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
 
 
   </body>
