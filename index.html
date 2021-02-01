@@ -379,12 +379,20 @@
 
     <div class="contacts-form">
       <form action="https://echo.htmlacademy.ru" method="post">
-        <label for="user-name">Ваше имя.</label>
-        <input type="text" name="name-field" id="user-name" placeholder="Имя Фамилия">
-        <label for="user-mail">Ваш e-mail.</label>
-        <input type="email" name="mail-field" id="user-mail" placeholder="email@example.com">
-        <label for="user-text">Текст письма:</label>
-        <textarea name="text-field" id="user-text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+        <div>
+          <div>
+            <label for="user-name">Ваше имя.</label>
+            <input type="text" name="name-field" id="user-name" placeholder="Имя Фамилия">
+          </div>
+          <div>
+            <label for="user-mail">Ваш e-mail.</label>
+            <input type="email" name="mail-field" id="user-mail" placeholder="email@example.com">
+          </div>
+        </div>
+        <div>
+          <label for="user-text">Текст письма:</label>
+          <textarea name="text-field" id="user-text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+        </div>
         <div>
           <button type="submit">Отправить</button>
         </div>
