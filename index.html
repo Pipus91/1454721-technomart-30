@@ -12,26 +12,22 @@
   </head>
   <body class="page-body">
 
-    <header>
+    <header class="page-header">
 
       <div class="header-top">
         
         <div class="wrapper">
 
-          <a class="header-logo" href="#"><img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт"></a>          
-          <button type="button">
-            <!-- Временно иконку поиска сделаем кнопкой -->
-            Поиск
-          </button>
-          <label for="search-field">Поле поиска</label>
-          <input type="search" name="search-field" id="search-field" placeholder="Поиск:">          
-          <a href="#">
+          <a href="#"><img class="header-logo" src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт"></a>          
+          <label class="hidden" for="search-field">Поле поиска</label>
+          <input class="search-field" type="search" name="search-field" id="search-field" placeholder="Поиск:">          
+          <a class="bookmark-lnk" href="#">
             Закладки: 0
           </a>
-          <a href="#">
+          <a class="cart-lnk" href="#">
             Корзина: 0
           </a>
-          <a href="#">Оформить заказ</a>
+          <a class="order-lnk" href="#">Оформить заказ</a>
         </div>
 
       </div>
@@ -40,19 +36,19 @@
         <div class="wrapper">
 
           <h1>Интернет-магазин строительных материалов и иснструментов для ремонта</h1>
-          <div>
+          <div class="header-contacts">
             <a href="tel:+78125550555">
               +7 (812) 555-05-55
             </a>
             <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
-          <div>
+          <div class="log-in-btns">
             <a href="#">Войти</a>
             <a href="#">Регистрация</a>
           </div>
 
           <nav class="main-nav">
-            <ul>
+            <ul class="nav-list">
               <li>
                 <a href="#">Главная</a>
               </li>
@@ -85,45 +81,43 @@
     <main>
 
       <section class="promo-section wrapper">
-        <h2>Каталоги товаров</h2>
+        <h2 class="hidden">Каталоги товаров</h2>
 
-        
-
-          <div class="materials">
-            <h3>Материалы</h3>    
-            <a href="#" class="promo-btn">
+          <div class="materials promo-catalog">
+            <h3 class="promo-header">Материалы</h3>    
+            <a class="promo-btn" href="#">
               На любой вкус
             </a>
             <!-- Иконка материалы -->
           </div>
   
-          <div class="instruments">
-            <h3>Инструмент</h3>    
-            <a href="#" class="promo-btn">
+          <div class="instruments promo-catalog">
+            <h3 class="promo-header">Инструмент</h3>    
+            <a class="promo-btn" href="#">
               На все случаи
             </a>
             <!-- Иконка инструмент -->
           </div>
           
-          <div class="equipment">
-            <h3>Техника</h3>    
-            <a href="#" class="promo-btn">
+          <div class="equipment promo-catalog">
+            <h3 class="promo-header">Техника</h3>    
+            <a class="promo-btn" href="#">
               Для стройки
             </a>
             <!-- Иконка техника -->
           </div>
           
-          <div class="discounts">
-            <h3>Скидки 50%</h3>    
-            <a href="#" class="promo-btn">
+          <div class="discounts promo-catalog">
+            <h3 class="promo-header">Скидки 50%</h3>    
+            <a class="promo-btn" href="#">
               На 350 товаров
             </a>
             <!-- Иконка скидка -->
           </div>
           
-          <div class="delivery">
-            <h3>Доставка</h3>    
-            <a href="#" class="promo-btn">
+          <div class="delivery promo-catalog">
+            <h3 class="promo-header">Доставка</h3>    
+            <a class="promo-btn" href="#">
               Бесплатно
             </a>
             <!-- Иконка доставка -->
@@ -245,7 +239,7 @@
 
         <div class="wrapper">
 
-          <h2>Сервисы</h2>
+          <h2 class="section-header">Сервисы</h2>
           <p>Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
             <div class="services-slider">
@@ -255,14 +249,14 @@
             <button class="slider-btn" type="button">Кредит</button>
           </div>
           <div class="services-slider-items">
-            <div class="slider-item">
+            <div class="slider-item item1">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо 
                 к вашему подъезду совершенно бесплатно!
                 Ведь мы неплохо заработаем, 
                 поднимая его на ваш этаж!</p>                
             </div>
-            <div class="slider-item">
+            <div class="slider-item item2">
               <h3>Гарантия</h3>
               <p>Если купленный у нас товар поломается или заискрит,
                  а также в случае пожара, спровоцированного его возгоранием,  
@@ -270,7 +264,7 @@
                  Мы обменяем сгоревший товар на новый. 
                  Дом уж восстановите как-нибудь сами.</p>                
             </div>
-            <div class="slider-item">
+            <div class="slider-item item3">
               <h3>Кредит</h3>
               <p>Если купленный у нас товар поломается или заискрит, 
                  а также в случае пожара, спровоцированного его </p>   
@@ -286,7 +280,7 @@
       <section class="about-section wrapper">        
 
           <div class="about-company">
-            <h2>Компания "Техномарт"</h2>
+            <h2 class="section-header">Компания "Техномарт"</h2>
             <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для 
                ремонта и строительства не оставит равнодушными любителей сэкономить на 
                гастарбайтерах.</p>
@@ -301,7 +295,7 @@
           </div>
 
           <div class="contacts">
-            <h2>Контакты</h2>
+            <h2 class="section-header">Контакты</h2>
             <p>Вы можете забрать товар сами, 
                заехав в наш офис:</p>
             <a class="contacts-map" href="#"><img src="img/contacts-map.jpg" width="300" height="158" alt="Карта"></a>
@@ -353,9 +347,9 @@
              Все права защищены</p>
 
           <ul class="social">
-            <li><a href="https://vk.com/htmlacademy">Вконтакте</a></li>
-            <li><a href="https://www.facebook.com/htmlacademy">Фейсбук</a></li>
-            <li><a href="https://www.instagram.com/htmlacademy/">Инстаграм</a></li>
+            <li><a class="vk" href="https://vk.com/htmlacademy"></a></li>
+            <li><a class="fb" href="https://www.facebook.com/htmlacademy"></a></li>
+            <li><a class="insta" href="https://www.instagram.com/htmlacademy/"></a></li>
           </ul>
 
           <p>
