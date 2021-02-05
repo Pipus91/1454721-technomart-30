@@ -57,8 +57,11 @@
     --basic-graylight: #C5C5C5;
     --basic-blue: #32425C;
     --basic-background: #F1F5F7;
+    --basic-background2: #F2F6F8;
+    --basic-background3: #F7F3EC;
     --extradarkblue: #161D29;
     --white: #ffffff;
+    --black: #000000;
     --special-white: rgba(255, 255, 255, 0.5);
     --special-yellow: #FFBF47;
     --special-yellowlight: #FFD27E;
@@ -72,6 +75,7 @@
     --special-graylight: #A9A9A9;
     --special-extradarkblue: #212A3A;
     --bordergray: #EAEAEA;
+    --textgray: #ADAAA5;
     --yellowlight: #FFD180;
     --success: #5FBB2D;
     --warning: #FFBF47;
@@ -180,6 +184,10 @@ img {
     background-color: var(--extradarkblue);
 }
 
+.not-empty {
+    background-color: var(--basic-red);
+}
+
 .order-lnk {
     background-color: var(--basic-green);
 }
@@ -223,7 +231,20 @@ img {
     font-size: 21px;
     font-weight: 400;
     line-height: 21px;
-    color: black;
+    color: var(--black);
+}
+
+.profile-lnk {
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.profile-nav-lnk {
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-blue);   
 }
 
 .log-in-btns a:hover {
@@ -543,3 +564,84 @@ img {
 .insta {
     background-image: url(../img/Icons/icon-insta.svg);
 }
+
+/* Catalog */
+
+.home-icon {
+    display: block;
+    width: 14px;
+    height: 12px;
+    background-image: url(../img/Icons/icon-home.svg);
+}
+
+.catalog-nav a {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--black);
+}
+
+.product-section-header {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    background-color: var(--basic-background2);
+}
+
+.filter-header,
+.sorting-header {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    background-color: var(--basic-background3);
+}
+
+.filter-container {
+    font-family: "PT Sans", "Arial", sans-serif;
+    text-transform: uppercase;
+}
+
+.filter-container legend {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.filter-price input {
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.filter-manufactures label,
+.filter-supply label {
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.filter-container button,
+.sorting-btn {
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.filter-container button {
+    width: 220px;
+    height: 38px;
+    border: 1px solid var(--bordergray);
+    background-color: var(--white);
+}
+
+.sorting-btn {
+    border: none;
+    background: none;
+    color: var(--textgray);
+    /* Рамка с квадратиками */
+    border-bottom: 1px dotted var(--basic-red);
+}
+
+.catalog-item {
+    width: 220px;
+    height: 318px;
+    border: 1px solid var(--bordergray);
+}       
