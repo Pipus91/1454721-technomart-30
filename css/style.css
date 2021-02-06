@@ -89,7 +89,7 @@
 body {
     /* Временно для себя */
     /* background-color: gray; */
-    min-width: 960px;
+    /* min-width: 960px; */
     margin: 0;
     padding: 0;
     font-family: "Cuprum", "Arial", sans-serif;
@@ -137,9 +137,24 @@ img {
     background-color: var(--basic-darkblue);
 }
 
-.main-nav {
+.nav-list {
+    display: flex;
+    justify-content: space-around;
     background-color: var(--basic-blue);
     border-bottom: 5px solid var(--basic-darkblue);
+    min-height: 55px;
+}
+
+.nav-list li {
+    width: 100%;
+}
+
+.nav-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .header-logo{
@@ -255,11 +270,11 @@ img {
     color: var(--basic-graylight);
 }
 
-.nav-list li:hover {
+.nav-list a:hover {
     background-color: var(--basic-darkblue);
 }
 
-.nav-list li:active {
+.nav-list a:active {
     background-color: var(--extradarkblue);
     color: var(--special-white);
 }
@@ -268,12 +283,6 @@ img {
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
-}
-
-.nav-list li {
-    text-align: center;
-    width: 100%;
-    height: 100%;
 }
 
 /* Promo section */
@@ -301,7 +310,7 @@ img {
     font-weight: 400;
     line-height: 18px;
     text-transform: uppercase;
-    width: 135px;
+    min-width: 135px;
     height: 38px;
     color: var(--white);
 }
@@ -387,7 +396,7 @@ img {
     text-transform: uppercase;
     color: var(--white);
     background-color: var(--basic-red);
-    width: 192px;
+    min-width: 192px;
     height: 38px;
 }
 
@@ -408,9 +417,11 @@ img {
     font-size: 18px;
     font-weight: 700px;
     line-height: 20px;
+    text-transform: uppercase;
 }
 
-.popular-item p {
+.popular-item del,
+catalog-item del {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 17px;
     font-weight: 700px;
@@ -428,7 +439,7 @@ img {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 141px;
+    min-width: 141px;
     height: 38px;
     border-radius: 5px;
 }
@@ -439,7 +450,7 @@ img {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 220px;
+    min-width: 220px;
     height: 145px;
     border: 1px solid var(--bordergray);
 }
@@ -569,9 +580,14 @@ img {
 
 .home-icon {
     display: block;
-    width: 14px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     background-image: url(../img/Icons/icon-home.svg);
+    background-repeat: no-repeat;
+}
+
+.catalog-nav {
+    display: flex;
 }
 
 .catalog-nav a {
@@ -579,6 +595,18 @@ img {
     font-size: 13px;
     line-height: 18px;
     color: var(--black);
+    text-transform: uppercase;
+    padding-left: 10px
+}
+
+.catalog-nav li:not(:last-child)::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    background-image: url(../img/Icons/icon-right-small.svg);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
 }
 
 .product-section-header {
@@ -594,11 +622,16 @@ img {
     font-size: 13px;
     line-height: 18px;
     background-color: var(--basic-background3);
+    text-transform: uppercase;
 }
 
 .filter-container {
     font-family: "PT Sans", "Arial", sans-serif;
     text-transform: uppercase;
+}
+
+.filter-container fieldset {
+    border: none;
 }
 
 .filter-container legend {
@@ -626,7 +659,7 @@ img {
 }
 
 .filter-container button {
-    width: 220px;
+    min-width: 220px;
     height: 38px;
     border: 1px solid var(--bordergray);
     background-color: var(--white);
@@ -644,4 +677,40 @@ img {
     width: 220px;
     height: 318px;
     border: 1px solid var(--bordergray);
-}       
+}     
+
+.catalog-item h3 {
+    text-transform: uppercase;
+}
+
+.pagination-items {
+    display: flex;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.pagination-link a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    min-width: 36px;
+    height: 36px;
+    border: 1px solid var(--bordergray);
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.pagination-link:last-child a {
+    min-width: 140px;
+}
+
+.pagination-link .active {
+    background-color: var(--basic-red);
+    color: var(--white);
+    border: none;
+    min-width: 38px;
+    height: 38px;
+}
