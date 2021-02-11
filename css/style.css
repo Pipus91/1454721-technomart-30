@@ -479,12 +479,14 @@ img {
     grid-gap: 20px;
 }
 
-.popular-item h3 {
+.popular-item h3,
+.catalog-item h3 {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 20px;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .popular-item del,
@@ -900,10 +902,7 @@ img {
     border: 1px solid var(--bordergray);
 }     
 
-.catalog-item h3 {
-    text-transform: uppercase;
-    margin: 0;
-}
+.catalog-item p {}
 
 .pagination-items {
     display: flex;
