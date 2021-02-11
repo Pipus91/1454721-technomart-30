@@ -106,12 +106,12 @@
                     <fieldset class="filter-price">
                         <legend>Цена:</legend>
                         <label class="hidden" for="filter-price-range">Диапазон цены</label>
-                        <input type="range" name="price-range" id="filter-price-range" min="0" max="35000" step="100" value="30000">
+                        <input class="price-range" type="range" name="price-range" id="filter-price-range" min="0" max="35000" step="100" value="30000">
                         <label class="hidden" for="filter-price-start">Цена от</label>
-                        <input type="number" name="price-start" id="filter-price-start" value="0">
-                        -
+                        <input class="price-start" type="number" name="price-start" id="filter-price-start" value="0">
+                        <!-- - -->
                         <label class="hidden" for="filter-price-end">Цена до</label>
-                        <input type="number" name="price-end" id="filter-price-end" value="30000">
+                        <input class="price-end" type="number" name="price-end" id="filter-price-end" value="30000">
                     </fieldset>
     
                     <fieldset class="filter-manufactures">
@@ -335,7 +335,7 @@
 
         </div>
 
-        <section class="additional-info">
+        <section class="additional-info catalog-info">
           <div class="wrapper">
 
             <h2 class="section-header">Пара слов о перфораторах</h2>
