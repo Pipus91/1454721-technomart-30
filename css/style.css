@@ -578,6 +578,7 @@ p {
     font-size: 36px;
     font-weight: 700;
     line-height: 36px;
+    margin-bottom: 10px;
 }
 
 .rectangle p {
@@ -774,13 +775,6 @@ p {
     color: var(--basic-blue);
     outline: none;
 } 
-
-.slider-item h3 {
-    font-size: 30px;
-    font-weight: 40;
-    line-height: 30px;
-    margin-bottom: 30px;
-}
 
 .slider-item p {
     width: 300px;
@@ -1234,6 +1228,8 @@ p {
     position: absolute;
     top: 0;
     left: 0;
+    padding-left: 24px;
+    padding-top: 23px;
 }
 
 .slider-item .catalog-btn {
