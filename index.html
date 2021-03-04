@@ -275,10 +275,10 @@
 
           <div class="about-company">
             <h2 class="section-header">Компания "Техномарт"</h2>
-            <>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для 
+               Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для 
                ремонта и строительства не оставит равнодушными любителей сэкономить на 
                гастарбайтерах. <br><br>
-            Мы можем доставить ваш товар в самые отдаленные точки России!
+               Мы можем доставить ваш товар в самые отдаленные точки России!
                Техномарт работает со многими транспортными компаниями:</p>
             <ul class="transport-list">
               <li>Деловые линии</li>
@@ -294,7 +294,29 @@
                заехав в наш офис:</p>
             <a class="contacts-map" href="#"><img src="img/contacts-map.jpg" width="300" height="158" alt="Карта"></a>
             <a class="catalog-btn contacts-btn" href="">Заблудились? Напишите нам!</a>
-          </div>        
+          </div>     
+          
+          <div class="contacts-form-window">
+            <form class="contacts-form" action="https://echo.htmlacademy.ru" method="post">
+              <div class="user-contacts contacts-form-wrapper">
+                <div class="user-name">
+                  <label for="user-name">Ваше имя.</label>
+                  <input type="text" name="name-field" id="user-name" placeholder="Имя Фамилия">
+                </div>
+                <div class="user-mail">
+                  <label for="user-mail">Ваш e-mail.</label>
+                  <input type="email" name="mail-field" id="user-mail" placeholder="email@example.com">
+                </div>
+              </div>
+              <div class="user-text contacts-form-wrapper">
+                <label for="user-text">Текст письма:</label>
+                <textarea name="text-field" id="user-text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+              </div>
+              <div class="contacts-form-buttons">
+                <button class="contacts-form-btn catalog-btn contacts-form-wrapper" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
 
       </section>
     
@@ -361,29 +383,6 @@
       </div>
 
     </footer>
-
-    <div class="contacts-form hidden">
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <div>
-          <div>
-            <label for="user-name">Ваше имя.</label>
-            <input type="text" name="name-field" id="user-name" placeholder="Имя Фамилия">
-          </div>
-          <div>
-            <label for="user-mail">Ваш e-mail.</label>
-            <input type="email" name="mail-field" id="user-mail" placeholder="email@example.com">
-          </div>
-        </div>
-        <div>
-          <label for="user-text">Текст письма:</label>
-          <textarea name="text-field" id="user-text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
-        </div>
-        <div>
-          <button type="submit">Отправить</button>
-        </div>
-      </form>
-    </div>
-
 
   </body>
 </html>
