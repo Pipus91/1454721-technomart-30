@@ -152,11 +152,14 @@
                 <!-- Стрелка вправо -->
               </button>
             </div>
+            </div>
             <div class="indicators">
-              <label class="hidden" for="indicator-left">Левый индикатор</label>
-              <input type="radio" name="indicator" id="indicator-left"> 
-              <label class="hidden" for="indicator-right">Правый индикатор</label>                       
-              <input type="radio" name="indicator" id="indicator-right">                        
+              <svg class="indicator-left-white">
+                <circle r="5" cx="5" cy="5" fill="white" />
+              </svg>
+              <svg class="indicator-left-red">
+                <circle r="3" cx="5" cy="5" fill="red" />
+              </svg>
             </div>
           </div>
 
@@ -296,7 +299,7 @@
             <a class="catalog-btn contacts-btn" href="">Заблудились? Напишите нам!</a>
           </div>     
           
-          <div class="contacts-form-window">
+          <div class="contacts-form-window modal-window hidden">
             <form class="contacts-form" action="https://echo.htmlacademy.ru" method="post">
               <div class="user-contacts contacts-form-wrapper">
                 <div class="user-name">
@@ -315,6 +318,7 @@
               <div class="contacts-form-buttons">
                 <button class="contacts-form-btn catalog-btn contacts-form-wrapper" type="submit">Отправить</button>
               </div>
+              <button class="contacts-form-close close-btn" type="button"></button>
             </form>
           </div>
 

@@ -49,6 +49,7 @@
 
 :root {
     --basic-red: #EE3643;
+    --basic-darkred: #CA2C37;
     --darkred: #B52933;
     --extradarkred: #8D1E26;
     --modal-red : #ff5257;
@@ -198,7 +199,7 @@ p {
     justify-content: space-around;
     background-color: var(--basic-blue);
     border-bottom: 5px solid var(--basic-darkblue);
-    min-height: 55px;
+    min-height: 60px;
 }
 
 .nav-list li {
@@ -432,13 +433,14 @@ p {
     min-width: 121px;
     margin-right: 10px;
     position: relative;
+    padding-left: 19px;
 }
 
 .log-in-lnk::before {
     content: "";
     position: absolute;
     top: 13px;
-    left: 10px;
+    left: 19px;
     width: 19px;
     height: 19px;
     background: url(../img/Icons/icon-login.svg) no-repeat;
@@ -505,6 +507,7 @@ p {
     line-height: 18px;
     text-transform: uppercase;
     min-width: 135px;
+    max-width: 185px    ;
     height: 38px;
     color: var(--white);
     position: absolute;
@@ -566,8 +569,16 @@ p {
 /* Slider */
 
 .slider-item {
-    width: 620px;
-    height: 266px;
+    min-width: 620px;
+    min-height: 266px;
+}
+
+.slider-item h3 {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-blue);
+    margin-bottom: 30px;
 }
 
 .rectangle {
@@ -581,6 +592,8 @@ p {
     font-size: 36px;
     font-weight: 700;
     line-height: 36px;
+    text-transform: uppercase;
+    color: var(--white);
     margin-bottom: 10px;
 }
 
@@ -621,6 +634,7 @@ p {
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
+    color: var(--basic-blue);
 }
 
 .popular-items {
@@ -647,7 +661,7 @@ p {
 .catalog-item p {
     font-family: "PT Sans", "Arial", sans-serif;
     font-size: 17px;
-    font-weight: 700px;
+    font-weight: 700;
     line-height: 18px;
     color: var(--special-graylight);
     margin-top: 0;
@@ -771,6 +785,7 @@ p {
     height: 61px;
     background-color: var(--basic-blue);
     border: none;
+    cursor: pointer;
 }
 
 .slider-btn:focus {
@@ -1308,22 +1323,64 @@ p {
     left: 24px;
 }
 
+.slider-item .catalog-btn:hover {
+    background-color: var(--basic-darkred);
+}
+
+.slider-item .catalog-btn:active {
+    background-color: var(--error);
+}
+
 .arrow-left {
     position: absolute;
     top: 122px;
     left: 24px;
+    width: 22px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-image: url(../img/Icons/icon-left.svg);
+    cursor: pointer;
 }
 
 .arrow-right {
     position: absolute;
     top: 122px;
     left: 578px;
+    width: 22px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-image: url(../img/Icons/icon-left.svg);
+    cursor: pointer;
+    transform: rotate(180deg);
 }
 
 .indicators {
     position: absolute;
-    top: 220px;
+    top: 210px;
     left: 295px;
+    width: 30px;
+    height: 10px;
+    position: relative;
+}
+
+.indicator-left-white {
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.indicator-left-red {
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
 }
 
 /* Modals */
@@ -1331,11 +1388,14 @@ p {
 .contacts-form-window {
     width: 620px;
     min-height: 430px;
-    border-top: 7px solid var(--modal-red);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
     position: absolute;
     left: 152px;
     top: -56px;
+}
+
+.modal-window {
+    border-top: 7px solid var(--modal-red);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
     background-color: var(--white);
 }
 
@@ -1348,15 +1408,19 @@ p {
     position: relative;
 }
 
-.contacts-form::after {
-    content: "";
+.close-btn {
     background-image: url(../img/Icons/icon-close.svg);
     width: 21px;
     height: 21px;
+    padding: 0;
+    border: none;
+    background-color: var(--white);
+}
+
+.contacts-form-close {
     position: absolute;
     top: 16px;
     right: 11px;
-
 }
 
 .user-contacts, 
@@ -1398,7 +1462,7 @@ p {
     min-height: 38px;
     padding: 7px 8px 7px 12px;
     border: 2px solid var(--bordergray);
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .user-name input::placeholder,
@@ -1440,4 +1504,77 @@ p {
     border: none;
     padding: 0;
     min-height: 38px;
+}
+
+.cart-modal.hidden {
+    display: none !important;
+}
+
+.cart-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 620px;
+    height: 282px;
+}
+
+.cart-modal::before {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    top: 55px;
+    left: 81px;
+    background-image: url(../img/Icons/icon-mark.svg);
+}
+
+.cart-modal p{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 68px;
+    padding-top: 73px;
+}
+
+.cart-modal-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--form-background);
+    width: 100%;
+    min-height: 112px;
+}
+
+.cart-modal-close {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+}
+
+.cart-modal-order,
+.continue-btn {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.cart-modal-order {
+    margin-right: 10px;
+}
+
+.continue-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 192px;
+    min-height: 38px;
+    background-color: var(--white);
+    border: none;
 }
