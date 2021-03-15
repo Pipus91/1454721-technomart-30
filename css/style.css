@@ -58,7 +58,7 @@
     --basic-grey: #3D546F;
     --basic-gray: #F9F5F0;
     --basic-graylight: #C5C5C5;
-    --basic-blue: #32425C;i
+    --basic-blue: #32425C;
     --basic-background: #F1F5F7;
     --basic-background2: #F2F6F8;
     --basic-background3: #F7F3EC;
@@ -357,6 +357,11 @@ p {
     opacity: 1;
 }
 
+.bookmark-lnk:active::before,
+.cart-lnk:active::before {
+    opacity: 0.3;
+}
+
 .not-empty {
     background-color: var(--basic-red);
 }
@@ -390,7 +395,6 @@ p {
 
 .header-contacts {
     grid-column: 5/9;
-    margin-right: 51px;
 }
 
 .header-contacts a {
@@ -431,16 +435,19 @@ p {
 }
 
 .profile {
-    grid-column: 9/13;
+    grid-column: 9 /13;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .log-in-links {
+    grid-column: 9/13;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     align-items: flex-start;
-    min-height: 72px;
+    min-height: 70px;
 }
 
 .log-in-links a {
@@ -455,10 +462,30 @@ p {
     min-height: 45px;
 }
 
+.log-in-lnk {
+    min-width: 121px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.index-login-icon {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    margin-right: 10px;
+}
+
+.index-login-icon:hover path {
+    fill: var(--basic-grey);
+}
+
+.index-login-icon:active path {
+    fill: var(--basic-graylight);
+}
+
 .registration-lnk {
     min-width: 150px;
 }
-
 
 .profile-lnk:active {
     color: var(--special-graylight);
@@ -466,6 +493,7 @@ p {
 
 .profile-links {
     position: relative;
+    justify-self: flex-end;
     display: flex;
     justify-content: center;
     background-color: var(--white);
