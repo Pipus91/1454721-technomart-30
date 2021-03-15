@@ -55,9 +55,10 @@
     --modal-red : #ff5257;
     --basic-green: #63A63E;
     --basic-darkblue: #293449;
+    --basic-grey: #3D546F;
     --basic-gray: #F9F5F0;
     --basic-graylight: #C5C5C5;
-    --basic-blue: #32425C;
+    --basic-blue: #32425C;i
     --basic-background: #F1F5F7;
     --basic-background2: #F2F6F8;
     --basic-background3: #F7F3EC;
@@ -235,6 +236,7 @@ p {
     min-height: 47px;
     background-color: var(--basic-red);
     border-bottom: 5px solid var(--darkred);
+    margin-right: 17px;
 }
 
 .header-logo:active {
@@ -243,6 +245,7 @@ p {
 }
 
 .search-field {
+    display: block;
     box-sizing: border-box;
     grid-column: 4/7;
     background-color: var(--basic-darkblue);
@@ -250,7 +253,6 @@ p {
     color: var(--white);
     width: 271px;
     padding: 0;
-    padding-left: 42px;
     height: 42px;
     margin: 0;
     position: relative;
@@ -261,19 +263,31 @@ p {
 }
 
 .search-field:focus::placeholder {
+    position: absolute;
+    height: 42px;
+    display: block;
     color: black;
     background-color: var(--white);
     outline: none;
+
 }
 
-.search-field::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 17px;
-    height: 17px;
-    background-image: url(../img/Icons/icon-search.svg);
+::-webkit-input-placeholder, 
+::-moz-placeholder,
+:-moz-placeholder,
+:-ms-input-placeholder {
+    color: var(--black);
+}   
+
+.search-box {
+    display: flex;
+}
+
+.search-icon {
+    order: -1;
+    margin-top: 12px;
+    margin-right: 8px;
+    opacity: 0.3;
 }
 
 .bookmark-lnk,
@@ -336,6 +350,11 @@ p {
 .cart-lnk:active {
     color: var(--special-white);
     background-color: var(--extradarkblue);
+}
+
+.bookmark-lnk:hover::before,
+.cart-lnk:hover::before {
+    opacity: 1;
 }
 
 .not-empty {
@@ -411,10 +430,15 @@ p {
     min-width: 270px;
 }
 
-.log-in-links {
+.profile {
     grid-column: 9/13;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.log-in-links {
+    display: flex;
     align-items: flex-start;
     min-height: 72px;
 }
@@ -431,38 +455,71 @@ p {
     min-height: 45px;
 }
 
-.log-in-lnk {
-    min-width: 121px;
-    margin-right: 10px;
-    position: relative;
-    padding-left: 19px;
-}
-
-.log-in-lnk::before {
-    content: "";
-    position: absolute;
-    top: 13px;
-    left: 19px;
-    width: 19px;
-    height: 19px;
-    background: url(../img/Icons/icon-login.svg) no-repeat;
-}
-
 .registration-lnk {
     min-width: 150px;
 }
 
-.profile-lnk {
-    font-size: 21px;
-    line-height: 21px;
-    color: var(--black);
-    background-color: var(--white);
+
+.profile-lnk:active {
+    color: var(--special-graylight);
 }
+
+.profile-links {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: var(--white);
+    min-width: 299px;
+    height: 45px;
+    margin-bottom: 7px;
+}
+
+.icon-login {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+}
+
+.icon-logout {
+    position: absolute;
+    top: 14px;
+    right: 17px;
+}
+
+.icon-login:hover path,
+.icon-logout:hover path {
+    fill: var(--basic-grey);
+} 
+
+.icon-login:active path,
+.icon-logout:active path {
+    fill: var(--basic-graylight);
+} 
 
 .profile-nav-lnk {
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-blue);   
+    position: relative;
+}
+
+.profile-nav-lnk:hover {
+    color: var(--basic-red);
+}
+
+.profile-nav-lnk:active {
+    color: var(--basic-graylight);
+}
+
+.profile-nav-lnk:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -18px; 
+    width: 4px;
+    height: 4px;
+    background-color: var(--basic-blue);
+    border-radius: 50%;
 }
 
 .log-in-links a:hover {
@@ -1090,25 +1147,19 @@ p {
     margin-bottom: 21px;
 }
 
-.profile-links {
-    grid-column: 9/13;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 299px;
-}
-
 .profile-nav-lnk:not(:last-of-type) {
     margin-right: 30px;
 }
 
 .profile-lnk {
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--black);
     display: inline-flex;
     justify-content: center;
     align-items: center;
     height: 45px;
     margin-bottom: 7px;
-    min-width: 299px;
 }
 
 
