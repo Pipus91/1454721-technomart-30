@@ -483,13 +483,14 @@ p {
     top: 14px;
     left: 15px;
     margin-right: 10px;
+    fill: var(--basic-graylight);
 }
 
-.index-login-icon:hover path {
+.index-login-icon:hover {
     fill: var(--basic-grey);
 }
 
-.index-login-icon:active path {
+.index-login-icon:active {
     fill: var(--basic-graylight);
 }
 
@@ -516,21 +517,23 @@ p {
     position: absolute;
     top: 13px;
     left: 15px;
+    fill: var(--basic-graylight);
 }
 
 .icon-logout {
     position: absolute;
     top: 14px;
     right: 17px;
+    fill: var(--basic-graylight);
 }
 
-.icon-login:hover path,
-.icon-logout:hover path {
+.icon-login:hover,
+.icon-logout:hover {
     fill: var(--basic-grey);
 } 
 
-.icon-login:active path,
-.icon-logout:active path {
+.icon-login:active,
+.icon-logout:active {
     fill: var(--basic-graylight);
 } 
 
@@ -1074,14 +1077,27 @@ p {
     margin-bottom: 34px;
 }
 
-.footer-about-nav li:hover {
-    border-bottom: 1px solid var(--white);
-    margin-top: 0;
+.footer-about-nav li {
+    position: relative;
+}
+
+.footer-about-nav li:hover::after {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 1px;
+   background-color: var(--white);
+   position: absolute;
+   bottom: 2px;
+   left: 0;
 }
 
 .footer-about-nav li:active {
     opacity: 0.5;
-    border: none;
+}
+
+.footer-about-nav li:active::after {
+    display: none;
 }
 
 .footer-catalog-nav {
@@ -1094,14 +1110,27 @@ p {
     color: var(--yellowlight);
 }
 
-.footer-catalog-nav li:hover {
-    border-bottom: 1px solid var(--yellowlight);
-    margin-top: 0;
+.footer-catalog-nav li {
+    position: relative;
+}
+
+.footer-catalog-nav li:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--yellowlight);
+    position: absolute;
+    bottom: 2px;
+    left: 0;
 }
 
 .footer-catalog-nav li:active {
     opacity: 0.5;
-    border: none;
+}
+
+.footer-catalog-nav li:active::after {
+    display: none;
 }
 
 .footer-bottom {
@@ -1121,15 +1150,27 @@ p {
 
 .made-by a {
     color: var(--yellowlight);
+    position: relative;
+    
 }
 
-.made-by a:hover {
-    border-bottom: 1px solid var(--yellowlight);
+.made-by a:hover::after {   
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--yellowlight);
+    position: absolute;
+    bottom: 0px;
+    left: 0;
 }
 
 .made-by a:active {
     color: var(--basic-red);
-    border: none;
+}
+
+.made-by a:active::after {
+    display: none;
 }
 
 .social {
@@ -1384,7 +1425,6 @@ p {
     border: none;
     background: none;
     color: var(--textgray);
-    /* Рамка с квадратиками */
     border-bottom: 1px dotted var(--basic-red);
 }
 
@@ -1402,6 +1442,32 @@ p {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     margin-bottom: 48px;
+}
+
+.catalog-item {
+    position: relative;
+}
+
+.catalog-item img {
+    width: 144px;
+    height: 128px;
+    margin-top: 22px;    
+    margin-bottom: 28px;
+}
+
+.catalog-item .item-btns {
+    position: absolute;
+    left: 37px;
+    top: 22px;
+    width: 144px;
+    height: 128px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+.button-buy {
+    margin-bottom: 10px;
 }
 
 .pagination-items {
@@ -1556,6 +1622,7 @@ p {
     top: 0;
     width: 10px;
     height: 10px;
+    fill: var(--white);
 }
 
 .indicator-left-red {
@@ -1564,6 +1631,7 @@ p {
     top: 0;
     width: 10px;
     height: 10px;
+    fill: var(--basic-red);
 }
 
 .indicator-right-white {
@@ -1572,6 +1640,7 @@ p {
     top: 0;
     width: 10px;
     height: 10px;
+    fill: var(--white);
 }
 
 .indicator-right-red {
@@ -1580,6 +1649,7 @@ p {
     top: 0;
     width: 10px;
     height: 10px;
+    fill: var(--basic-red);
 }
 
 /* Modals */
